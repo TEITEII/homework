@@ -1,3 +1,8 @@
+// This file is part of Substrate-node-template.
+
+// Copyright (C) 2019-2021 Parity Technologies (UK) Ltd.
+// SPDX-License-Identifier: Apache-2.0
+
 use crate as pallet_kitties;
 use sp_core::H256;
 use frame_support::parameter_types;
