@@ -160,7 +160,7 @@ fn buy_kitty_failed_not_for_sale() {
 
 		assert_noop!(
 			KittiesModule::buy(Origin::signed(2), 0),
-			Error::<Test>::InvalidKittyIndex,
+			Error::<Test>::NotForSale,
 		);
 	})
 }
@@ -172,7 +172,7 @@ fn buy_kitty_failed_already_owned() {
 
 		assert_noop!(
 			KittiesModule::buy(Origin::signed(1), 0), 
-			Error::<Test>::InvalidKittyIndex,
+			Error::<Test>::AlreadyOwned,
 		);
 	})
 }
