@@ -255,6 +255,7 @@ pub mod pallet {
 			payload.using_encoded(blake2_128)
 		}
 
+		#[allow(dead_code)]
 		fn get_kitty_id() -> sp_std::result::Result<KittyIndex, DispatchError> {
 			let kitty_id = match Self::kitties_count() {
 				Some(id) => {
@@ -269,6 +270,7 @@ pub mod pallet {
 			Ok(kitty_id)
 		}
 
+		#[allow(dead_code)]
 		fn insert_kitty(owner: &T::AccountId, kitty_id: KittyIndex, new_dna: [u8;16]) {
 			Kitties::<T>::insert(kitty_id, Some(Kitty(new_dna)));
 
